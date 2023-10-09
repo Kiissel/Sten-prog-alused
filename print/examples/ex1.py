@@ -1,7 +1,8 @@
-print("Hello world")
+print("Hi", end="")
+print("Sten!")       
 
-print("Welcome")
-print("to school!")
+print("Hi ", end="")
+print("Sten!")       
 
-print("""Welcome
-to school""")
+print("Hi", end=" ")
+print("Sten!")   
