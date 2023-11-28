@@ -35,7 +35,7 @@ def find_tallest(height_dict: dict) -> str:
     """
     height = 0
     tallest = ""
- 
+
     for name in height_dict.keys():
         if height_dict[name] > height:
             height = height_dict[name]
@@ -83,7 +83,14 @@ def count_symbol_appearances(stringy: str) -> dict:
     :param stringy: string to be processed.
     :return: dictionary with symbol counts.
     """
-    
+    symbol_count = {}
+
+    for symbol in stringy:
+        if symbol in symbol_count:
+            symbol_count[symbol] += 1
+        else:
+            symbol_count[symbol] = 1
+    return symbol_count
 
 
 def organise_by_first_symbol(strings: list) -> dict:
@@ -96,4 +103,12 @@ def organise_by_first_symbol(strings: list) -> dict:
     :param strings: list of strings.
     :return: dict with starting symbol and corresponding words in order of appearance.
     """
-    # your code goes here
+    result_dict = {}
+
+    for word in strings:
+        if word[0] in result_dict:
+            result_dict[word[0]].append(word)
+        else:
+            result_dict[word[0]] = [word]
+
+    return result_dict
