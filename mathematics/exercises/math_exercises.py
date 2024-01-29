@@ -51,7 +51,7 @@ def area_of_a_circle(radius: float) -> float:
 def area_of_an_equilateral_triangle(side_length: float) -> float:
     """Calculate and return the area of an equilateral triangle."""
     # Formula for the area of an equilateral triangle
-    triangle_area = (math.sqrt(3) / 4) * side_length**2
+    triangle_area = round((math.sqrt(3) * side_length ** 2) / 4)
     return area
 
 
